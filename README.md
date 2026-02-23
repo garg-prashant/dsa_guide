@@ -1,5 +1,5 @@
 # The Complete DSA Handbook
-## A FAANG Interview Preparation Guide — Python Edition
+## DSA Preparation Guide — Python Edition
 
 ---
 
