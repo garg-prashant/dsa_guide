@@ -383,7 +383,6 @@ graph = {
 - **Modified Dijkstra**: Change the cost function (e.g., minimize max edge, minimize number of hops)
 - **K-th shortest path**: Use modified heap with state `(dist, node, k)`
 - **Dijkstra on grid**: Nodes are cells, weights are terrain costs
-- **GreyOrange relevance**: Robot navigating warehouse aisles with different traversal costs
 
 ### Practice Problems
 
@@ -396,7 +395,6 @@ graph = {
 | 5 | [778. Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | 🔴 Hard | Dijkstra where cost = max cell value along path |
 | 6 | [1976. Number of Ways to Arrive at Destination](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/) | 🟡 Medium | Dijkstra + count paths of equal shortest distance |
 
-> 💡 **Start with 743, then 1631.** 743 is the textbook Dijkstra problem. 1631 is the most likely *type* to appear at GreyOrange — robot moving across a terrain grid with variable costs.
 
 ### Video References
 
@@ -533,7 +531,6 @@ A* consistently followed the path with f=7, never wasting time on dead ends!
 | Best for | All-pairs shortest path | Single target pathfinding |
 
 ### Key Interview Patterns
-- **GreyOrange direct relevance**: AMR robots use A* for warehouse navigation
 - **Weighted A\***: Multiply heuristic by factor > 1 for faster (suboptimal) paths
 - **Bidirectional A\***: Run A* from both ends, meet in the middle
 
@@ -558,7 +555,6 @@ A* consistently followed the path with f=7, never wasting time on dead ends!
 | 🎮 Sebastian Lague | [A\* Pathfinding E01: Algorithm Explanation](https://www.youtube.com/watch?v=-L-WgKMFuhE) | Visual grid walkthrough — directly mirrors warehouse robot navigation |
 | 🎮 Sebastian Lague | [A\* Pathfinding Full Series (Playlist)](https://www.youtube.com/playlist?list=PLFt_AvWsXl0cq5Umv3pMC9SPnKjfp9eGW) | Deep dive: heap optimization, path smoothing, threading |
 
-> 🏭 Sebastian Lague's series is especially relevant for GreyOrange — the grid-based robot pathfinding visuals are almost identical to AMR warehouse navigation.
 
 ---
 
@@ -671,7 +667,6 @@ Initial in-degrees: `{0:0, 1:1, 2:1, 3:2, 4:1}`
 - **Detect cycle in directed graph**: Kahn's — if output length < V, cycle exists
 - **Alien Dictionary (LeetCode 269)**: Build graph from character ordering, then topo sort
 - **Parallel scheduling**: Group nodes by levels (BFS-style topo sort gives layers)
-- **GreyOrange relevance**: Task dependency ordering in warehouse job scheduling
 
 ### Practice Problems
 
@@ -684,7 +679,6 @@ Initial in-degrees: `{0:0, 1:1, 2:1, 3:2, 4:1}`
 | 5 | [310. Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | 🟡 Medium | Reverse topo sort — peel leaves inward to find roots |
 | 6 | [1857. Largest Color Value in a Directed Graph](https://leetcode.com/problems/largest-color-value-in-a-directed-graph/) | 🔴 Hard | Topo sort + DP tracking color counts — tests both skills together |
 
-> 💡 **Start with 207 + 210 as a pair.** 207 asks "is it possible?" (cycle check), 210 asks "what's the order?" (Kahn's). Solving both back-to-back cements the full Kahn's algorithm. Then tackle 2115 — it's the closest to a real scheduling problem like GreyOrange would have.
 
 ### Video References
 
@@ -957,7 +951,6 @@ parent: [0, 0, 0, 0, 0]   ← fully compressed!
 - **LeetCode 684 (Redundant Connection)**: Union returns False → that edge creates cycle
 - **Kruskal's MST**: Sort edges by weight, union greedily, skip if already connected
 - **LeetCode 721 (Accounts Merge)**: Union emails belonging to same account
-- **GreyOrange relevance**: Detecting connected robot zones in warehouse map
 
 ### Practice Problems
 
@@ -970,7 +963,6 @@ parent: [0, 0, 0, 0, 0]   ← fully compressed!
 | 5 | [1584. Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/) | 🟡 Medium | Kruskal's MST using Union-Find — build graph implicitly |
 | 6 | [990. Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/) | 🟡 Medium | Union-Find on equations — process `==` first, then validate `!=` |
 
-> 💡 **Start with 547, then 1319.** 547 is the hello-world of Union-Find. 1319 adds the insight of counting "spare edges" — a pattern that appears in connectivity problems. 1584 (Kruskal's) is great to know for GreyOrange since it maps directly to "minimum cost to connect all warehouse zones."
 
 ### Video References
 
