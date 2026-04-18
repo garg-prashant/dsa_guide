@@ -1,5 +1,4 @@
-# Graph Algorithms — Senior Staff Engineer Interview Prep
-### GreyOrange | Coding Round Reference
+# Graph Algorithms
 
 ---
 
